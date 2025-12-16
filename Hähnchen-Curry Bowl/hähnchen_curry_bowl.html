@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hähnchen-Curry Bowl</title>
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../fonts/fonts.css" />
+    <link rel="stylesheet" href="../recipe.css" />
+
+    <link rel="icon" type="image/png" href="../img/favicon.png" sizes="32x32" />
+
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="../dom.js"></script>
+  </head>
+
+  <body>
+    <div class="layout">
+      <header class="site-header">
+        <div w3-include-html="../templates/header.html"></div>
+      </header>
+
+      <main class="page">
+        <section class="recipe-hero">
+          <h1>Hähnchen-Curry Bowl</h1>
+          <img src="../img/hähnchenCurry_bowl.jpg" alt="Hähnchen-Curry Bowl" />
+        </section>
+
+        <div class="recipe-meta">
+          <div class="recipe-meta_item">
+            <img src="../img/icons/clock-regular.svg" alt="Zubereitungszeit" />
+            <div>30 Min.</div>
+          </div>
+          <div class="recipe-meta_item">
+            <img src="../img/icons/brain-solid.svg" alt="Schwierigkeitsgrad" />
+            <div>simpel</div>
+          </div>
+          <div class="recipe-meta_item">
+            <img src="../img/icons/calendar-alt-regular.svg" alt="Datum" />
+            <div>15.12.2025</div>
+          </div>
+        </div>
+
+        <div class="second_line"></div>
+
+        <section class="recipe-ingredients">
+          <div class="recipe-servings">
+            <span>Zutaten für</span>
+
+            <div class="recipe-servings_input">
+              <input
+                id="servingsInput"
+                type="number"
+                min="1"
+                max="10"
+                value="1"
+              />
+              <button onclick="calculatePortions()">Portionen</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="ingredients_table">
+          <table>
+            <tbody>
+              <tr>
+                <td class="amount" data-base="500" data-unit="g">500 g</td>
+                <td>Hackfleisch gemischt</td>
+              </tr>
+              <tr>
+                <td class="amount" data-base="500" data-unit="ml">500 ml</td>
+                <td>Fleischbrühe</td>
+              </tr>
+              <tr>
+                <td class="amount" data-base="1" data-unit="TL">1 TL</td>
+                <td>Senf</td>
+              </tr>
+              <tr>
+                <td class="amount" data-base="1" data-unit="TL">1 TL</td>
+                <td>Majoran (getrocknet)</td>
+              </tr>
+              <tr>
+                <td class="amount" data-base="1" data-unit="EL">1 EL</td>
+                <td>Butter</td>
+              </tr>
+              <tr>
+                <td class="amount" data-base="1" data-unit="EL">1 EL</td>
+                <td>Mehl</td>
+              </tr>
+              <tr>
+                <td class="amount" data-base="2" data-unit="EL">2 EL</td>
+                <td>Kapern</td>
+              </tr>
+              <tr>
+                <tr>
+                <td class="amount" data-base="1" data-unit="EL">1 EL</td>
+                <td>Weißweinessig</td>
+              </tr>
+                <td class="amount" data-base="1" data-unit="TL">1 TL</td>
+                <td>Zucker</td>
+              </tr>
+              
+              <tr>
+                <td class="amount" data-base="1" data-unit="">1</td>
+                <td>Brötchen</td>
+              </tr>
+              <tr>
+                <td class="amount" data-base="1" data-unit="">1</td>
+                <td>Zwiebel</td>
+              </tr>
+              <tr>
+                <td class="amount" data-base="1" data-unit="">1</td>
+                <td>Ei (Größe M)</td>
+              </tr>
+
+              <tr>
+                <td class="amount" data-base="2" data-unit="">2</td>
+                <td>Essiggurken</td>
+              </tr>
+
+              <tr>
+                <td class="amount" data-base="" data-unit=""></td>
+                <td>Salz &amp; Pfeffer</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="recipe-steps">
+          <h2>Zubereitung</h2>
+
+          <div class="recipe-meta">
+            <div class="recipe-meta_item">
+              <img src="../img/icons/clock-regular.svg" alt="Arbeitszeit" />
+              <div>ca. 30 Min.</div>
+            </div>
+            <div class="recipe-meta_item">
+              <img src="../img/icons/clock-regular.svg" alt="Gesamtzeit" />
+              <div>Gesamtzeit ca. 1 Std.</div>
+            </div>
+          </div>
+
+          <ol class="recipe-steps_list">
+            <li>
+              <strong>Hähnchen vorbereiten:</strong>
+              <br />Die Hähnchenbrustfilets waschen, trocken tupfen und in dünne
+              Streifen schneiden. Mit Salz und Pfeffer würzen und in einer
+              Pfanne mit etwas Öl scharf anbraten, bis sie goldbraun sind.
+              Anschließend aus der Pfanne nehmen und beiseitestellen.
+            </li>
+            <li>
+              <strong>Gemüse schneiden:</strong>
+              <br />Zwiebeln fein hacken, Lauch in feine Ringe schneiden,
+              Paprika entkernen und würfeln. Möhren schälen, längs halbieren und
+              in dünne Scheiben schneiden. Knoblauchzehen schälen.
+            </li>
+            <li>
+              <strong>Gemüse anbraten:</strong>
+              <br />In einem Wok oder einer großen Pfanne etwas Öl erhitzen.
+              Zuerst die Zwiebeln glasig dünsten, dann das übrige Gemüse
+              hinzufügen und kurz anbraten. Den Knoblauch pressen und zum Gemüse
+              geben. Mit Currypulver bestäuben und gut durchrühren.
+            </li>
+            <li>
+              <strong>Sauce zubereiten:</strong>
+              <br />Joghurt und Kokosmilch hinzufügen, Tomatenmark einrühren und
+              alles gut vermengen. Ca. 20 Minuten bei geschlossenem Deckel leise
+              köcheln lassen, bis das Gemüse gar ist, dabei gelegentlich am
+              Boden rühren. 5 Minuten vor Ende das Hähnchen wieder hinzugeben
+              und erwärmen.
+            </li>
+            <li>
+              <strong>Abschmecken & servieren:</strong>
+              <br />Mit Salz, Pfeffer, Currypulver und Paprikapulver
+              abschmecken. Dazu passt frisch gekochter Reis.
+            </li>
+          </ol>
+        </section>
+
+        <section class="author">
+          <h2>Rezept erstellt von</h2>
+          <div class="author_info">
+            <img src="../img/profile-lisa.JPEG" alt="Profilbild von Lisa" />
+            Lisa
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div w3-include-html="../templates/footer.html"></div>
+      </footer>
+    </div>
+
+    <script>
+      function calculatePortions() {
+        const input = document.getElementById("servingsInput");
+        let portions = parseInt(input.value, 10);
+
+        if (isNaN(portions) || portions < 1) {
+          portions = 1;
+          input.value = "1";
+        }
+
+        if (portions > 10) {
+          portions = 10;
+          input.value = "10";
+        }
+
+        const amounts = document.querySelectorAll(".amount");
+
+        amounts.forEach((amount) => {
+          const baseAttr = amount.getAttribute("data-base");
+          const unit = amount.getAttribute("data-unit") || "";
+          if (!baseAttr) return; // leere Werte überspringen
+
+          const base = Number(baseAttr);
+          if (isNaN(base)) return;
+
+          amount.textContent = unit
+            ? `${base * portions} ${unit}`
+            : base * portions;
+        });
+      }
+
+      w3.includeHTML(initNavigation);
+    </script>
+  </body>
+</html>

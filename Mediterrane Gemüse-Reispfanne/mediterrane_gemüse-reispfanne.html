@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mediterrane Gemüse-Reispfanne</title>
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../fonts/fonts.css">
+  <link rel="stylesheet" href="../recipe.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png" sizes="32x32">
+
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+  <script src="../dom.js"></script>
+</head>
+
+<body>
+  <div class="layout">
+
+    <header class="site-header">
+      <div w3-include-html="../templates/header.html"></div>
+    </header>
+
+    <main class="page">
+
+      <section class="recipe-hero">
+        <h1>Mediterrane Gemüse-Reispfanne</h1>
+        <img src="../img/mediterrane_gemüse_reispfanne.png" alt="Mediterrane Gemüse-Reispfanne">
+      </section>
+
+      <div class="recipe-meta">
+        <div class="recipe-meta_item">
+          <img src="../img/icons/clock-regular.svg" alt="Zubereitungszeit">
+          <div>30 Min.</div>
+        </div>
+        <div class="recipe-meta_item">
+          <img src="../img/icons/brain-solid.svg" alt="Schwierigkeitsgrad">
+          <div>simpel</div>
+        </div>
+        <div class="recipe-meta_item">
+          <img src="../img/icons/calendar-alt-regular.svg" alt="Datum">
+          <div>15.12.2025</div>
+        </div>
+      </div>
+
+      <div class="second_line"></div>
+
+      <section class="recipe-ingredients">
+        <div class="recipe-servings">
+          <span>Zutaten für</span>
+          <div class="recipe-servings_input">
+            <input id="servingsInput" type="number" min="1" max="10" value="1">
+            <button onclick="calculatePortions()">Portionen</button>
+          </div>
+        </div>
+      </section>
+
+     <section class="ingredients_table">
+  <table>
+    <tbody>
+      <tr>
+        <td class="amount" data-base="1000" data-unit="g">1000 g</td>
+        <td>Spätzle</td>
+      </tr>
+      <tr>
+        <td class="amount" data-base="300" data-unit="g">300 g</td>
+        <td>Zwiebeln</td>
+      </tr>
+      <tr>
+        <td class="amount" data-base="250" data-unit="g">250 g</td>
+        <td>würziger Käse</td>
+      </tr>
+      <tr>
+        <td class="amount" data-base="3" data-unit="EL">3 EL</td>
+        <td>Mehl</td>
+      </tr>
+      <tr>
+        <td class="amount" data-base="75" data-unit="g">75 g</td>
+        <td>Sahne</td>
+      </tr>
+      <tr>
+        <td class="amount" data-base="50" data-unit="g">50 g</td>
+        <td>Butterschmalz</td>
+      </tr>
+      <tr>
+        <td class="amount" data-base=""></td>
+        <td>Salz, Pfeffer, Schnittlauch</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+      <section class="recipe-steps">
+        <h2>Zubereitung</h2>
+
+        <div class="recipe-meta">
+          <div class="recipe-meta_item">
+            <img src="../img/icons/clock-regular.svg" alt="Arbeitszeit">
+            <div>ca. 30 Min.</div>
+          </div>
+          <div class="recipe-meta_item">
+            <img src="../img/icons/clock-regular.svg" alt="Gesamtzeit">
+            <div>Gesamtzeit ca. 1 Std.</div>
+          </div>
+        </div>
+
+        <ol class="recipe-steps_list">
+          <li>
+            <strong>Gemüse vorbereiten:</strong>
+            <br>Das Gemüse und die Pilze putzen. Die Möhren blanchieren, sie sollten noch Biss haben. Die Zucchini längs halbieren und das weiche Innere mit einem Löffel entfernen.
+          </li>
+          <li>
+            <strong>Gemüse schneiden:</strong>
+            <br>Zucchini, blanchierte Möhren, Champignons und Paprika in nicht zu dünne Scheiben bzw. Streifen schneiden. Die Frühlingszwiebeln von der Wurzel befreien und ca. 3 cm Stängel belassen. Alles Gemüse in einer Schüssel mischen.
+          </li>
+          <li>
+            <strong>Gemüse anbraten:</strong>
+            <br>Jeweils 1/3 des zerkleinerten Gemüses zusammen mit Thymian in einer Pfanne mit 1 EL Olivenöl scharf anbraten, bis das Gemüse leicht Farbe bekommt. Anschließend in eine Schüssel geben. Den Vorgang wiederholen, bis alles Gemüse angebraten ist.
+          </li>
+          <li>
+            <strong>Marinade zubereiten:</strong>
+            <br>3 EL Olivenöl, den Saft einer halben Zitrone, eine Prise Salz und etwas Chiliflocken (oder Pfeffer) verrühren.
+          </li>
+          <li>
+            <strong>Gemüse marinieren:</strong>
+            <br>Das angebratene Gemüse mit der Marinade übergießen und mindestens 10 Minuten ziehen lassen.
+          </li>
+        </ol>
+      </section>
+
+      <section class="author">
+        <h2>Rezept erstellt von</h2>
+        <div class="author_info">
+          <img src="../img/profile-lisa.JPEG" alt="Profilbild von Lisa">
+          Lisa
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div w3-include-html="../templates/footer.html"></div>
+    </footer>
+  </div>
+
+  <script>
+  function calculatePortions() {
+  const input = document.getElementById("servingsInput"); // <-- hier die korrekte ID
+  let portions = parseInt(input.value, 10);
+
+  if (isNaN(portions) || portions < 1) {
+    portions = 1;
+    input.value = "1";
+  }
+
+  if (portions > 10) {
+    portions = 10;
+    input.value = "10";
+  }
+
+  const amounts = document.querySelectorAll(".amount");
+
+  amounts.forEach((amount) => {
+    const baseAttr = amount.getAttribute("data-base");
+    const unit = amount.getAttribute("data-unit") || "";
+
+    if (!baseAttr) return;
+
+    const base = Number(baseAttr);
+    if (isNaN(base)) return;
+
+    amount.textContent = unit ? `${base * portions} ${unit}` : base * portions;
+  });
+}
+
+w3.includeHTML(initNavigation);
+</script>
+
+</body>
+
+</html>

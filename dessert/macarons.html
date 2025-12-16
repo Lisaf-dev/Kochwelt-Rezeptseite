@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Macarons</title>
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../fonts/fonts.css">
+
+  <link rel="stylesheet" href="../recipe.css">
+
+  <link rel="icon" type="image/png" href="../img/favicon.png" sizes="32x32">
+
+  
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+  <script src="../dom.js"></script>
+</head>
+
+<body>
+  <div class="layout">
+
+    
+    <header class="site-header">
+      <div w3-include-html="../templates/header.html"></div>
+    </header>
+
+    <main class="page">
+
+   
+      <section class="recipe-hero">
+        <h1>Macarons</h1>
+        <img src="../img/macarons.jpg" alt="Macarons">
+      </section>
+
+      
+      <div class="recipe-meta">
+        <div class="recipe-meta_item">
+          <img src="../img/icons/clock-regular.svg" alt="Zubereitungszeit">
+          <div>35 Min.</div>
+        </div>
+        <div class="recipe-meta_item">
+          <img src="../img/icons/brain-solid.svg" alt="Schwierigkeitsgrad">
+          <div>medium</div>
+        </div>
+        <div class="recipe-meta_item">
+          <img src="../img/icons/calendar-alt-regular.svg" alt="Datum">
+          <div>15.12.2025</div>
+        </div>
+      </div>
+
+      <div class="second_line"></div>
+
+      
+      <section class="recipe-ingredients">
+        <div class="recipe-servings">
+          <span>Zutaten für</span>
+
+          <div class="recipe-servings_input">
+            <input id="servingsInput" type="number" min="1" max="10" value="1">
+            <button onclick="calculatePortions()">Portionen</button>
+          </div>
+        </div>
+      </section>
+
+      
+      <section class="ingredients_table">
+        <table>
+    <tbody>
+      <tr>
+        <td class="amount" data-base="90" data-unit="g">90 g</td>
+        <td>Eiweiß</td>
+      </tr>
+      <tr>
+        <td class="amount" data-base="25" data-unit="g">25 g</td>
+        <td>Zucker</td>
+      </tr>
+      <tr>
+        <td class="amount" data-base="1" data-unit="Prise">1 Prise(n)</td>
+        <td>Salz</td>
+      </tr>
+      <tr>
+        <td class="amount" data-base="110" data-unit="g">110 g</td>
+        <td>Mandeln, gemahlen</td>
+      </tr>
+      <tr>
+        <td class="amount" data-base="200" data-unit="g">200 g</td>
+        <td>Puderzucker</td>
+      </tr>
+    </tbody>
+  </table>
+      </section>
+
+      
+      <section class="recipe-steps">
+        <h2>Zubereitung</h2>
+
+        <div class="recipe-meta">
+          <div class="recipe-meta_item">
+            <img src="../img/icons/clock-regular.svg" alt="Arbeitszeit">
+            <div>ca. 35 Min.</div>
+          </div>
+          <div class="recipe-meta_item">
+            <img src="../img/icons/clock-regular.svg" alt="Gesamtzeit">
+            <div>Gesamtzeit ca. 1 Std. 25 Min.</div>
+          </div>
+        </div>
+
+        <ol class="recipe-steps_list">
+          <li>
+    <strong>Puderzucker und Mandeln sieben:</strong>
+    <br>Puderzucker und gemahlene Mandeln in eine Schüssel sieben und gut vermischen. 
+    Am besten 2–3 Mal sieben, um eine feine, klumpenfreie Mischung zu erhalten.
+  </li>
+
+  <li>
+    <strong>Eiweiß schlagen:</strong>
+    <br>Eiweiß mit einer Prise Salz aufschlagen und den Zucker langsam einrieseln lassen.
+    So lange schlagen, bis das Eiweiß schnittfest ist.
+  </li>
+
+  <li>
+    <strong>Mandelmischung unterheben:</strong>
+    <br>Die Puderzucker-Mandelmischung vorsichtig unter das Eiweiß heben.
+    Es sollte eine glänzende, dickflüssige Masse entstehen.
+  </li>
+
+  <li>
+    <strong>Macarons formen:</strong>
+    <br>Die Masse in einen Spritzbeutel mit großer Lochtülle füllen und auf ein mit Backpapier belegtes Backblech Kreise spritzen. 
+    Zwischen den Kreisen genügend Abstand lassen und ca. 50 Minuten antrocknen lassen.
+  </li>
+
+  <li>
+    <strong>Backen:</strong>
+    <br>Alle Bleche gleichzeitig in den vorgeheizten Backofen bei Umluft 140°C schieben und etwa 15 Minuten backen.
+    Danach die Macarons vollständig auskühlen lassen.
+  </li>
+
+  <li>
+    <strong>Aufbewahren & füllen:</strong>
+    <br>Die ausgekühlten Macarons 24 Stunden in einer verschließbaren Dose lagern. 
+    Danach können sie mit Ganache, Buttercreme oder einer anderen Füllung versehen und zusammengesetzt werden.
+  </li>
+
+  <li>
+    <strong>Tipp:</strong>
+    <br>Das Backpapier kann am Blech mit Butter fixiert werden, damit es nicht verrutscht. 
+    Alternativ kann man Besteck oder kleine Gewichte darauflegen. 
+    Dieses Rezept ergibt etwa 25 Macarons. 
+  </li>
+        </ol>
+      </section>
+
+     
+      <section class="author">
+        <h2>Rezept erstellt von</h2>
+        <div class="author_info">
+          <img src="../img/profile-lisa.JPEG" alt="Profilbild von Lisa">
+          Lisa
+        </div>
+      </section>
+
+    </main>
+
+   
+    <footer class="site-footer">
+      <div w3-include-html="../templates/footer.html"></div>
+    </footer>
+  </div>
+
+  
+  <script>
+    function calculatePortions() {
+  const input = document.getElementById('servingsInput');
+  let portions = parseInt(input.value, 10);
+
+  if (isNaN(portions) || portions < 1) {
+    portions = 1;
+    input.value = '1';
+  }
+
+  if (portions > 10) {
+    portions = 10;
+    input.value = '10';
+  }
+
+  const amounts = document.querySelectorAll('.amount');
+
+  amounts.forEach((amount) => {
+    const baseAttr = amount.getAttribute('data-base');
+    const unit = amount.getAttribute('data-unit') || ''; 
+    if (!baseAttr) return;
+
+    const base = Number(baseAttr);
+    if (isNaN(base)) return;
+
+    const newValue = base * portions;
+
+    // Sonderbehandlung für "Prise(n)"
+    if (unit.toLowerCase() === 'prise') {
+      amount.textContent = `${newValue} Prise(n)`;
+    } else {
+      amount.textContent = `${newValue} ${unit}`;
+    }
+  });
+}
+
+    
+    w3.includeHTML(initNavigation);
+  </script>
+</body>
+
+</html>

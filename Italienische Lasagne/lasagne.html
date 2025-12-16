@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Italienische Lasagne</title>
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../fonts/fonts.css" />
+
+    <link rel="stylesheet" href="../recipe.css" />
+
+    <link rel="icon" type="image/png" href="../img/favicon.png" sizes="32x32" />
+
+    
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="../dom.js"></script>
+  </head>
+
+  <body>
+    <div class="layout">
+      
+      <header class="site-header">
+        <div w3-include-html="../templates/header.html"></div>
+      </header>
+
+      <main class="page">
+        
+        <section class="recipe-hero">
+          <h1>Italienische Lasagne</h1>
+          <img src="../img/lasagne.png" alt="Lasagne" />
+        </section>
+
+        
+        <div class="recipe-meta">
+          <div class="recipe-meta_item">
+            <img src="../img/icons/clock-regular.svg" alt="Zubereitungszeit" />
+            <div>1 Std.</div>
+          </div>
+          <div class="recipe-meta_item">
+            <img src="../img/icons/brain-solid.svg" alt="Schwierigkeitsgrad" />
+            <div>medium</div>
+          </div>
+          <div class="recipe-meta_item">
+            <img src="../img/icons/calendar-alt-regular.svg" alt="Datum" />
+            <div>15.12.2025</div>
+          </div>
+        </div>
+
+        <div class="second_line"></div>
+
+        
+        <section class="recipe-ingredients">
+          <div class="recipe-servings">
+            <span>Zutaten für</span>
+            <div class="recipe-servings_input">
+              <input
+                id="servingsInput"
+                type="number"
+                min="1"
+                max="10"
+                value="1"
+              />
+              <button onclick="calculatePortions()">Portionen</button>
+            </div>
+          </div>
+        </section>
+
+      
+       <section class="ingredients_table">
+  <table>
+    <tbody>
+      <tr>
+        <td class="amount" data-base="300" data-unit="g">300 g</td>
+        <td>Rindfleisch</td>
+      </tr>
+      <tr>
+        <td class="amount" data-base="100" data-unit="g">100 g</td>
+        <td>Speck gewürfelt</td>
+      </tr>
+      <tr>
+        <td class="amount" data-base="300" data-unit="g">300 g</td>
+        <td>Zwiebel</td>
+      </tr>
+      <tr>
+        <td class="amount" data-base="80" data-unit="g">80 g</td>
+        <td>Karotten</td>
+      </tr>
+      <tr>
+        <td class="amount" data-base="250" data-unit="g">250 g</td>
+        <td>Rotkohl</td>
+      </tr>
+      <tr>
+        <td class="amount" data-base="500" data-unit="g">500 g</td>
+        <td>Kloßteig</td>
+      </tr>
+      <tr>
+        <td class="amount" data-base="200" data-unit="g">200 g</td>
+        <td>Sahne</td>
+      </tr>
+      <tr>
+        <td class="amount" data-base=""></td>
+        <td>Salz und Pfeffer</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+       
+        <section class="recipe-steps">
+          <h2>Zubereitung</h2>
+
+          <div class="recipe-meta">
+            <div class="recipe-meta_item">
+              <img src="../img/icons/clock-regular.svg" alt="Arbeitszeit" />
+              <div>ca. 1 Std.</div>
+            </div>
+            <div class="recipe-meta_item">
+              <img src="../img/icons/clock-regular.svg" alt="Gesamtzeit" />
+              <div>Gesamtzeit ca. 2 Std.</div>
+            </div>
+          </div>
+
+          <ol class="recipe-steps_list">
+            <li>
+              <strong>Gemüse vorbereiten:</strong>
+              <br>Möhren, Sellerie, Zwiebeln und Knoblauch schälen. Selleriegrün, Petersilie und Basilikum zufügen und fein hacken.
+            </li>
+            <li>
+              <strong>Bolognesesauce kochen:</strong>
+              <br>Hackfleisch krümelig anbraten, Gemüse zugeben, Rotwein hinzufügen und 1 Stunde köcheln lassen.
+            </li>
+            <li>
+              <strong>Béchamelsauce zubereiten:</strong>
+              <br>Butter schmelzen, Mehl einrühren, Milch zugeben und cremig kochen. Mit Salz und Muskat abschmecken.
+            </li>
+            <li>
+              <strong>Lasagneplatten vorbereiten:</strong>
+              <br>Nudelplatten ca. 6 Minuten kochen, abschrecken und abtropfen lassen.
+            </li>
+            <li>
+              <strong>Lasagne schichten:</strong>
+              <br>Bolognesesauce, Lasagneplatten, Béchamelsauce, Schinken und Käse schichten.
+            </li>
+            <li>
+              <strong>Abschließen & backen:</strong>
+              <br>Im Ofen bei 200 °C ca. 40 Minuten backen.
+            </li>
+            <li>
+              <strong>Tipp:</strong>
+              <br>Lasagneplatten können auch ungekocht verwendet werden.
+            </li>
+          </ol>
+        </section>
+
+       
+        <section class="author">
+          <h2>Rezept erstellt von</h2>
+          <div class="author_info">
+            <img src="../img/profile-lisa.JPEG" alt="Profilbild von Lisa" />
+            Lisa
+          </div>
+        </section>
+      </main>
+
+ 
+      <footer class="site-footer">
+        <div w3-include-html="../templates/footer.html"></div>
+      </footer>
+    </div>
+
+   
+   <script>
+  function calculatePortions() {
+  const input = document.getElementById("servingsInput");
+  let portions = parseInt(input.value, 10);
+
+  if (isNaN(portions) || portions < 1) {
+    portions = 1;
+    input.value = "1";
+  }
+
+  if (portions > 10) {
+    portions = 10;
+    input.value = "10";
+  }
+
+  const amounts = document.querySelectorAll(".amount");
+
+  amounts.forEach((amount) => {
+    const baseAttr = amount.getAttribute("data-base");
+    const unit = amount.getAttribute("data-unit") || ""; // Einheit aus data-unit
+
+    if (!baseAttr) return; // leere Werte wie Salz & Pfeffer überspringen
+
+    const base = Number(baseAttr);
+    if (isNaN(base)) return;
+
+    amount.textContent = unit ? `${base * portions} ${unit}` : base * portions;
+  });
+}
+
+w3.includeHTML(initNavigation);
+</script>
+  </body>
+</html>

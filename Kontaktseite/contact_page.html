@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontaktseite</title>
+
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="./contact_page.css" />
+  <link rel="stylesheet" href="../fonts/fonts.css" />
+
+  <link rel="icon" type="image/png" href="../img/favicon.png" sizes="32x32" />
+
+  <!-- W3 Include + Navigation -->
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+  <script src="../dom.js"></script>
+</head>
+
+<body>
+  <div class="layout">
+    <!-- Einheitlicher Header -->
+    <header class="site-header">
+      <div w3-include-html="../templates/header.html"></div>
+    </header>
+
+    <main class="page flex-jc">
+      <div class="contact_container">
+        <h2>Kontaktiere uns</h2>
+
+        <form onsubmit="sendMail(event)">
+          <label>
+            Dein Name:
+            <input id="name" name="name" type="text" required />
+          </label>
+
+          <label>
+            Deine E-Mail:
+            <input id="email" name="email" type="email" required />
+          </label>
+
+          <label>
+            Deine Nachricht:
+            <textarea id="message" name="message" required></textarea>
+          </label>
+
+          <div class="btn_container">
+            <button id="submit_btn" type="submit">Abschicken</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <!-- Einheitlicher Footer -->
+    <footer class="site-footer">
+      <div w3-include-html="../templates/footer.html"></div>
+    </footer>
+  </div>
+
+  <script src="./contact-page.js"></script>
+
+  <!-- W3-HTML-Includes laden und danach Navigation initialisieren -->
+  <script>
+    w3.includeHTML(function () {
+      initNavigation();
+    });
+  </script>
+</body>
+</html>

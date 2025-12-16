@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kochwelt</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+
+    <link rel="icon" type="image/png" href="./img/favicon.png" sizes="32x32" />
+
+    
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="./dom.js"></script>
+  </head>
+
+  <body>
+    <div class="layout">
+      
+      <header class="site-header">
+        <div w3-include-html="./templates/header.html"></div>
+      </header>
+
+      <main>
+        
+        <div class="rdt-atf page">
+          <img class="rdt-atf-pic" src="./img/macarons.jpg" alt="Macarons" />
+
+          <div class="rdt-span">
+            <h1>Köstliche Macarons</h1>
+
+            Zarte Macarons gelten als kleine Kunstwerke der französischen Backkunst.
+<br>Mit diesem zuverlässigen Rezept gelingen sie Schritt für Schritt auch zu Hause.
+<br>Unser süßes Highlight des Tages.
+
+            <a href="./dessert/macarons.html">
+              <button class="rdt-button">Rezept öffnen</button>
+            </a>
+          </div>
+        </div>
+
+        
+        <div class="sec-con">
+          <div class="sec-inner page">
+            <h1>Lust auf was Neues?</h1>
+          
+
+          <div class="section-links">
+            <a href="./Mediterrane Gemüse-Reispfanne/mediterrane_gemüse-reispfanne.html">
+              <div class="quicklink">
+                <img
+                  src="./img/mediterrane_gemüse_reispfanne.png"
+                  alt="Mediterrane Gemüse-Reispfanne"
+                />
+                <h4>
+                  Mediterrane<br />
+                  Gemüse-Reispfanne
+                </h4>
+              </div>
+            </a>
+
+            <a href="./Italienische Lasagne/lasagne.html">
+              <div class="quicklink">
+                <img
+                  src="./img/lasagne.png"
+                  alt="Lasagne"
+                />
+                <h4>
+                  Italienische Lasagne 
+                </h4>
+              </div>
+            </a>
+
+            <a href="./Hähnchen-Curry Bowl/hähnchen_curry_bowl.html">
+              <div class="quicklink">
+                <img
+                  src="./img/hähnchenCurry_bowl.jpg"
+                  alt="Hähnchen-Curry Bowl"
+                />
+                <h4>
+                  Hähnchen-Curry Bowl
+                </h4>
+              </div>
+            </a>
+          </div>
+          </div>
+        </div>
+
+       
+       <div class="overscrpt-below page">
+          <div class="rdt-below page">
+
+          <h1>Deine Kochwelt wartet auf dich</h1>
+        
+          <span>
+           Lass dich inspirieren, probiere Neues aus und entdecke die Vielfalt der Küche.
+Bei Kochwelt erwarten dich abwechslungsreiche Rezepte.
+<br>Unsere Rezepte sind einfach nachzukochen und liebevoll zusammengestellt.
+<br>Viel Spaß beim Kochen, Ausprobieren und Genießen!
+          </span>
+          </div> 
+          <img
+            src="./img/ cooking .jpg"
+            alt="Holzlöffel mit verschiedenen Gewürzen"
+          />
+          
+        </div>
+      </main>
+
+      
+     
+      <footer class="site-footer">
+        <div w3-include-html="./templates/footer.html"></div>
+      </footer>
+    </div>
+
+    
+    <script>
+      w3.includeHTML(initNavigation);
+    </script>
+  </body>
+</html>
