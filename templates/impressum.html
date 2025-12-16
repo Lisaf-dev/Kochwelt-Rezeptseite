@@ -4,13 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Impressum</title>
+
+    <meta name="description" content="Impressum der Website von Lisa Fuchsloch" />
+
     <link rel="stylesheet" href="../style.css" />
-   
-
-
-  <!-- FONTS EINBINDEN -->
-
-
+    <link rel="stylesheet" href="../fonts/fonts.css" />
     <link rel="icon" type="image/png" href="../img/favicon.png" sizes="32x32" />
 
     <script src="https://www.w3schools.com/lib/w3.js"></script>
@@ -24,17 +22,38 @@
       </header>
 
       <main class="page">
-        
+        <article class="impressum">
+          <h1>Impressum</h1>
 
+          <p>
+            <strong>Angaben gemäß § 5 TMG</strong><br />
+            Lisa Fuchsloch<br />
+            Kreuzgasse 18<br />
+            88529 Zwiefalten
+          </p>
 
+          <h2>Kontakt</h2>
+          <p>
+            E-Mail:
+            <a href="mailto:lfuchs44@gmx.de">lfuchs44@gmx.de</a>
+          </p>
 
-        
+          <h2>Quelle</h2>
+          <p>
+            Dieses Impressum wurde mit Hilfe von
+            <a href="https://www.e-recht24.de" target="_blank" rel="noopener">
+              eRecht24.de
+            </a>
+            erstellt.
+          </p>
+        </article>
       </main>
 
       <footer class="site-footer">
         <div w3-include-html="../templates/footer.html"></div>
       </footer>
     </div>
+
     <script>
       w3.includeHTML(function () {
         initNavigation();
