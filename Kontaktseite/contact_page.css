@@ -15,7 +15,6 @@
   width: 100%;
   box-sizing: border-box;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  height: 525px;
 }
 
 .contact_container h2 {
@@ -64,7 +63,10 @@
   text-align: center;
   margin-top: 8px;
 }
-
+.privacy-note {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
 #submit_btn {
   min-width: 140px;
   transition: background-color 0.1s ease-in-out, transform 0.1s ease-in-out;
