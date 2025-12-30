@@ -189,7 +189,7 @@ button:hover {
   transform: scale(1.02);
 }
 
-/* Sektionen / Content */
+
 .sec-con {
   background-color: rgba(0, 0, 0, 0.08);
   display: flex;
@@ -455,12 +455,19 @@ button:hover {
 }
 
 @media (max-width: 444px) {
+   .quicklinks li {
+    margin-left: 10px; 
+            font-size: 14px;
+}
       .header-inner {
         height: 78px;
     }
   h1 {
-    font-size: 20px;
+    font-size: 18px;
   }
+      .quicklink h4 {
+        font-size: 16px;
+    }
 
 .hero-content span,
 .rdt-below span {
@@ -470,4 +477,13 @@ button:hover {
         height: 170px;
         width: 300px;
     }
+    .footer-inner {
+        height: 35px;
+    }
+    .footer-inner div img {
+    height: 36px;
+    }
+        .footer_links {
+          font-size: 14px;
+        }
     }
