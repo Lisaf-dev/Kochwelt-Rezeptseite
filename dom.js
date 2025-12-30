@@ -6,4 +6,10 @@ function initNavigation() {
     navToggle.addEventListener('click', () => {
         headerNav.classList.toggle('nav-open');
     });
+
+  window.addEventListener('scroll', () => {
+  if (headerNav.classList.contains('nav-open')) {
+    headerNav.classList.remove('nav-open');
+  }
+});
 }
