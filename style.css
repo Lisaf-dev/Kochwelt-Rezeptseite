@@ -106,7 +106,8 @@ button:hover {
   list-style-type: none;
   display: flex;
   margin-bottom: 4px;
-  font-size: 22px;
+  height: 35px;
+  align-items: center;
 }
 
 .quicklinks li {
@@ -189,7 +190,6 @@ button:hover {
   transform: scale(1.02);
 }
 
-
 .sec-con {
   background-color: rgba(0, 0, 0, 0.08);
   display: flex;
@@ -210,7 +210,7 @@ button:hover {
   display: flex;
   gap: 40px;
   margin-top: 70px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .rdt-below {
@@ -300,9 +300,7 @@ button:hover {
   h1 {
     font-size: 28px;
   }
-  .quicklinks {
-    font-size: 20px;
-  }
+
   .hero-content h1 {
     margin-bottom: 10px;
   }
@@ -327,9 +325,7 @@ button:hover {
   .rdt-below {
     font-size: 16px;
   }
-  .quicklinks {
-    font-size: 16px;
-  }
+
   .quicklink img {
     height: 200px;
     width: 200px;
@@ -359,13 +355,13 @@ button:hover {
 }
 
 @media (max-width: 762px) {
-      .header-inner img {
-        height: 50px;
-      }
-        
+  .header-inner img {
+    height: 50px;
+  }
+
   h1 {
-    margin-top: 32px;
-    margin-bottom: 26px;
+    margin-top: 42px;
+    margin-bottom: 35px;
   }
   .nav-toggle {
     display: flex;
@@ -407,8 +403,8 @@ button:hover {
     align-items: center;
   }
   .hero {
-    margin-top: 32px;
-    margin-bottom: 32px;
+    margin-top: 42px;
+    margin-bottom: 42px;
   }
   .hero-content span,
   .rdt-below span {
@@ -424,14 +420,14 @@ button:hover {
   }
 
   .quicklink h4 {
-    margin-bottom: 32px;
+    margin-bottom: 42px;
   }
   .sec-inner {
     margin-bottom: 0px;
   }
 
   .overscrpt-below {
-    margin-top: 32px;
+    margin-top: 42px;
   }
 
   .site-footer {
@@ -455,35 +451,40 @@ button:hover {
 }
 
 @media (max-width: 444px) {
-   .quicklinks li {
-    margin-left: 10px; 
-            font-size: 14px;
-}
-      .header-inner {
-        height: 78px;
-    }
+  .header-inner {
+    height: 78px;
+  }
   h1 {
     font-size: 18px;
   }
-      .quicklink h4 {
-        font-size: 16px;
-    }
+  .quicklink h4 {
+    font-size: 16px;
+  }
 
-.hero-content span,
-.rdt-below span {
-  max-width: 317px;
-}
-    .pic {
-        height: 170px;
-        width: 300px;
-    }
-    .footer-inner {
-        height: 35px;
-    }
-    .footer-inner div img {
+  .hero-content span,
+  .rdt-below span {
+    max-width: 317px;
+  }
+  .pic {
+    height: 170px;
+    width: 300px;
+  }
+  .footer-inner {
+    height: 35px;
+  }
+  .footer-inner div img {
     height: 36px;
-    }
-        .footer_links {
-          font-size: 14px;
-        }
-    }
+  }
+  .footer_links {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 372px) {
+  .quicklinks {
+    flex-direction: column;
+    align-items: end;
+    height: 78px;
+    gap: 10px;
+  }
+}
